@@ -41,10 +41,12 @@ calcium =  calcium_full{1}(500000:510000); % shorten to 100000:200000 for analys
 
 %%% Parameters for Nikolas
 calcium =  calcium_full{1}(100000:200000); 
-a = 4 % amplitude from villette paper
-tau = .9 % 0.02: 66sp/20s, 0.01: 16, % decay from villette paper
+a = 10 % 4 % amplitude from villette paper, dF/F
+tau = .9 %.9 % 0.02: 66sp/20s, 0.01: 16, % decay from villette paper
 ton = .03 % rise
-sigma = .00300 % autocalibration gave huge number.  In mlspike paper, usually range .001 to .4
+sigma = .00300 % noise level.  RMS/A, units hz.  
+% Noise level was defined as the noise root-mean-square (RMS) power in the 0.1–3 Hz frequency band, normalized by A
+% autocalibration gave huge number.  In mlspike paper, usually range .001 to .4
 drift = 0.0 % removed drift (butterworth) in python
 dt = 0.00035 % 5000 Hz 
 
